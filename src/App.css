@@ -1,0 +1,18 @@
+/* Variables */
+:root {
+    /* colors */
+    --color-grey-text: #777;
+    --color-light-grey: #ececec;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #A4A7A7
+}

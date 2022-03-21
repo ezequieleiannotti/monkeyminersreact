@@ -1,0 +1,11 @@
+.product-img {
+    width: 18rem;
+}
+
+.product-card {
+    border: 1px solid var(--color-grey-text);
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #e4e8e8;
+}

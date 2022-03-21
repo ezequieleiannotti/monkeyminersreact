@@ -1,0 +1,16 @@
+.item-count-container {
+    background-color: #a0a0a0;
+    padding: 10px;
+    width: 20rem;
+    text-align: center;
+    border-radius:10px
+}
+
+.icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+span {
+    user-select: none;
+}

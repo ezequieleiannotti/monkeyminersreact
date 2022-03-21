@@ -1,0 +1,10 @@
+.basic {
+    text-align: center;
+    margin: 3rem 0;
+    color: var(--color-grey-text);
+    font-size: 3rem;
+}
+
+.primary-heading {
+    margin: 2rem 0;
+}

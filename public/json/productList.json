@@ -1,0 +1,62 @@
+[
+    {
+        "id": "1",
+        "category": "3090",
+        "title": "3090",
+        "description_short": "Placas 3090 para Ethereum",
+        "description_long": "Rig de 6 placas de video, poder de minado 715 MHZ. Nvidia o Geforce",
+        "price": 15000,
+        "cantidad":5,
+        "pictureUrl": "https://t7m8e9c8.rocketcdn.me/wp-content/uploads/2017/09/rig-minado-ethereum-zcash-nvidia-amd.jpg"
+    },
+    {
+        "id": "2",
+        "category": "3090",
+        "title": "3090",
+        "description_short": "Placas 3090 para Ethereum",
+        "description_long": "Rig de 5 placas de video, poder de minado 595 MHZ. Nvidia o Geforce",
+        "price": 12000,
+        "cantidad":8,
+        "pictureUrl": "https://i.blogs.es/adecd1/rig1/450_1000.jpg"
+    },
+    {
+        "id": "3",
+        "category": "3090",
+        "title": "3090",
+        "description_short": "Placas 3090 para Ethereum",
+        "description_long": "Rig de 4 placas de video, poder de minado 475 MHZ. Nvidia o Geforce",
+        "price": 10000,
+        "cantidad":2,
+        "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3f80xw3ZFy33M8PSnuDJPl-nzTNdPhR5CDfZDdX5Xf5BIfGTMsqJ8afM9y5x5DHtfdlM&usqp=CAU"
+    },
+    {
+        "id": "4",
+        "category": "3080",
+        "title": "3080",
+        "description_short": "Placas 3080 para Ethereum",
+        "description_long": "Rig de 6 placas de video, poder de minado 540 MHZ. Nvidia o Geforce",
+        "price": 8000,
+        "cantidad":3,
+        "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSQc9fQNMS9_mKdA3uTd2SDYBofH-3P1RiIsT2Y0k3QkFu9hDE_YOTaywJSB4Yz6IpGg4&usqp=CAU"
+    },
+    {
+        "id": "5",
+        "category": "3080",
+        "title": "3080",
+        "description_short": "Placas 3080 para Ethereum",
+        "description_long": "Rig de 5 placas de video, poder de minado 450 MHZ. Nvidia o Geforce",
+        "price": 6000,
+        "cantidad":7,
+        "pictureUrl": "https://m.media-amazon.com/images/I/71s6gMaolwL._AC_SY450_.jpg"
+    },
+    {
+        "id": "6",
+        "category": "3080",
+        "title": "3080",
+        "description_short": "Placas 3080 para Ethereum",
+        "description_long": "Rig de 4 placas de video, poder de minado 450 MHZ. Nvidia o Geforce",
+        "price": 5000,
+        "cantidad":9,
+        "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXk8gQ2VW-hT34MeYrJrm_fGaAbsQgim7HiwnPBpvm26qnCp3Ip35tBdhJ6WiqIfFhjcY&usqp=CAU"
+    }
+]
