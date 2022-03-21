@@ -31,7 +31,7 @@ const ItemDetailContainer = () => {
       title={product.title}
       description={product.description_long}
       price={product.price}
-      cantidad={product.cantidad}
+      stock={product.stock}
       pictureUrl={product.pictureUrl}
     />
   );

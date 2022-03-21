@@ -4,12 +4,12 @@ import "./ItemDetail.css";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 
-const ItemDetail = ({ title, description, price, cantidad, pictureUrl }) => {
+const ItemDetail = ({ title, description, price, stock, pictureUrl }) => {
   const [finishBuy, setFinishBuy] = useState(false);
   const { addItem } = useContext(CartContext);
 
-  const onAdd = (amount, cantidad) => {
-    if (amount <= cantidad) {
+  const onAdd = (amount, stock) => {
+    if (amount <= stock) {
       alert(`Agregaste ${amount} producto(s) al carrito`);
       setFinishBuy(true);
     } else {
@@ -24,7 +24,8 @@ const ItemDetail = ({ title, description, price, cantidad, pictureUrl }) => {
         <img src={pictureUrl} alt="" />
         <p>{title}</p>
         <p>{description}</p>
-        <p>${price}</p>
+        <hr />
+        <p>Precio en USD: {price}</p>
         {finishBuy > 0 && (
           <Link to={"/cart"}>
             <button type="button" className="btn btn-primary" onClick={addItem}>
@@ -32,9 +33,7 @@ const ItemDetail = ({ title, description, price, cantidad, pictureUrl }) => {
             </button>
           </Link>
         )}
-        {!finishBuy && (
-          <ItemCount cantidad={cantidad} initial={1} onAdd={onAdd} />
-        )}
+        {!finishBuy && <ItemCount stock={stock} initial={1} onAdd={onAdd} />}
       </div>
     </div>
   );

@@ -26,9 +26,9 @@ export const Cart = () => {
         {cart.map((product) => (
           <div key={product.id}>
             <h4>{product.title}</h4>
-            <p>Cantidad: {product.description}</p>
-            <p>Cantidad: {product.cantidad}</p>
-            <p>Precio: ${product.cantidad * product.precio}</p>
+            <p>stock: {product.description}</p>
+            <p>stock: {product.stock}</p>
+            <p>Precio: ${product.stock * product.precio}</p>
             <button
               className="btn btn-danger"
               onClick={() => eliminarItem(product.id)}

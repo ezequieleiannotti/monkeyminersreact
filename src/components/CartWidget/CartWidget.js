@@ -4,7 +4,7 @@
 // import { CartContext } from "../../context/CartContext";
 
 // export const CartWidget = () => {
-//   const { cantidadCart, cart } = useContext(CartContext);
+//   const { stockCart, cart } = useContext(CartContext);
 
 //   return (
 //     <Link
@@ -12,7 +12,7 @@
 //       className={`cart-widget ${cart.length === 0 ? "cart-hidden" : ""}`}
 //     >
 //       <BsFillCartFill />
-//       <span>{cantidadCart()}</span>
+//       <span>{stockCart()}</span>
 //     </Link>
 //   );
 // };

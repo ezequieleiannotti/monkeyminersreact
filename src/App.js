@@ -9,7 +9,12 @@ import { Cart } from "./components/Cart/Cart";
 const App = () => {
   return (
     <BrowserRouter>
-      <NavBar logo={"Monkey Miners"} link1={"3090"} link2={"3080"} />
+      <NavBar
+        logo={"Monkey Miners"}
+        link1={"3090"}
+        link2={"3080"}
+        link3={"GPU"}
+      />
       <Switch>
         <Route exact path="/">
           <ItemListContainer heading={"Rig para mineria Ethereum"} />
@@ -17,6 +22,7 @@ const App = () => {
         <Route path="/category/:category">
           <ItemListContainer heading={"Rig para mineria Ethereum"} />
         </Route>
+
         <CartProvider>
           <Route exact path="/item/:id">
             <ItemDetailContainer />

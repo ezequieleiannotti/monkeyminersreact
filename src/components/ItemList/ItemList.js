@@ -14,7 +14,7 @@ const ItemList = ({ products, loading }) => {
                 title={product.name}
                 description={product.description_short}
                 price={product.price}
-                cantidad={product.cantidad}
+                stock={product.stock}
                 pictureUrl={product.pictureUrl}
                 loading={loading}
               />

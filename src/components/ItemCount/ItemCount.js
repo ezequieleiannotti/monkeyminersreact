@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./ItemCount.css";
 
-export const ItemCount = ({ cantidad, initial, onAdd }) => {
+export const ItemCount = ({ stock, initial, onAdd }) => {
   const [items, setItems] = useState(initial);
 
   const addItem = () => {
-    items < cantidad && setItems(items + 1);
+    items < stock && setItems(items + 1);
   };
 
   const removeItem = () => {
@@ -22,7 +22,7 @@ export const ItemCount = ({ cantidad, initial, onAdd }) => {
       <button
         type="button"
         className="btn btn-primary"
-        onClick={() => onAdd(items, cantidad)}
+        onClick={() => onAdd(items, stock)}
       >
         Agregar al carrito
       </button>

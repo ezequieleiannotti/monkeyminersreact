@@ -9,7 +9,7 @@ const Item = ({
   description,
   price,
   pictureUrl,
-  cantidad,
+  stock,
   loading,
 }) => {
   return loading ? (
@@ -23,7 +23,8 @@ const Item = ({
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{description}</p>
         <p className="card-text">${price}</p>
-        <p className="card-text">Disponibles: {cantidad}</p>
+        <p className="card-text">Disponibles: {stock}</p>
+        <hr />
         <Link to={`/item/${id}`} className="btn btn-primary">
           Detalles
         </Link>

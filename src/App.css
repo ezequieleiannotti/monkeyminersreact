@@ -16,3 +16,12 @@
 body {
     background-color: #A4A7A7
 }
+
+product-card {
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.primary-heading {
+    font-family: monospace;
+}

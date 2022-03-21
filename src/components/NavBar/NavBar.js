@@ -40,6 +40,13 @@ const NavBar = (props) => {
               >
                 {props.link2}
               </NavLink>
+              <NavLink
+                activeClassName="active"
+                className="nav-link"
+                to={"/category/GPU"}
+              >
+                {props.link3}
+              </NavLink>
             </li>
             <CartWidget />
           </ul>

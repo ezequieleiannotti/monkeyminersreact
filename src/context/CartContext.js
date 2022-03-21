@@ -13,13 +13,13 @@ export const CartProvider = ({ children }) => {
     return cart.some((product) => product.id === id);
   };
 
-  const cantidadCart = () => {
-    return cart.reduce((acc, product) => acc + product.cantidad, 0);
+  const stockCart = () => {
+    return cart.reduce((acc, product) => acc + product.stock, 0);
   };
 
   const totalCart = () => {
     return cart.reduce(
-      (acc, product) => acc + product.cantidad * product.precio,
+      (acc, product) => acc + product.stock * product.precio,
       0
     );
   };
@@ -38,7 +38,7 @@ export const CartProvider = ({ children }) => {
         cart,
         agregarAlCarrito,
         isInCart,
-        cantidadCart,
+        stockCart,
         totalCart,
         vaciarCart,
         eliminarItem,
