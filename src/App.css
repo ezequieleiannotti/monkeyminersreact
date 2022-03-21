@@ -32,6 +32,10 @@ product-card {
      display: inline-block;
  }
 
- .page-footer {background-color: rgb(126, 124, 124);
+ .page-footer {background-color: rgb(245, 245, 245);
     font-family: monospace;  
             }
+
+.mt-4{
+    padding:0
+}
