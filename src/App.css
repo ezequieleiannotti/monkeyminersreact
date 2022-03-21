@@ -25,3 +25,13 @@ product-card {
 .primary-heading {
     font-family: monospace;
 }
+
+ .navbar{font-family: monospace;}
+
+ .nav-link {
+     display: inline-block;
+ }
+
+ .page-footer {background-color: rgb(126, 124, 124);
+                
+            }
