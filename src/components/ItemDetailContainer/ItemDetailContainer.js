@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Spinner from "../Spinner/Spinner";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
@@ -24,17 +24,7 @@ const ItemDetailContainer = () => {
     }, 2000);
   }, []);
 
-  return loading ? (
-    <Spinner />
-  ) : (
-    <ItemDetail
-      title={product.title}
-      description={product.description_long}
-      price={product.price}
-      stock={product.stock}
-      pictureUrl={product.pictureUrl}
-    />
-  );
+  return loading ? <Spinner /> : <ItemDetail product={product} />;
 };
 
 export default ItemDetailContainer;

@@ -76,7 +76,7 @@
         "description_short": "Placa de Video 3700TI",
         "description_long": "Placa de Video",
         "price": 5000,
-        "stock":9,
+        "stock":11,
         "pictureUrl": "https://outtec.com.ar/wp-content/uploads/2022/01/c1.png"
     },
     {
@@ -86,7 +86,7 @@
         "description_short": "Placa de Video 3700 LHR",
         "description_long": "Placa de Video",
         "price": 5000,
-        "stock":9,
+        "stock":6,
         "pictureUrl": "https://m.media-amazon.com/images/I/81wgpSgw-kS._AC_SY450_.jpg"
     }
 ]
