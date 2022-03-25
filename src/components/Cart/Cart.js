@@ -25,7 +25,7 @@ export const Cart = () => {
         <div className="container my-4">
           <h2>Tu compra</h2>
           <hr />
-          Carrito ({carQuantity})
+
           {cart.map((product) => (
             <div key={product.item.id}>
               <h4>{product.item.title}</h4>

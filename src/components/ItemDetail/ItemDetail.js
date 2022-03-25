@@ -11,7 +11,7 @@ const ItemDetail = ({ product, initial }) => {
   const [finishBuy, setFinishBuy] = useState(false);
   const [items, setItems] = useState(1);
   const { agregarAlCarrito } = useCart();
-
+  const Swal = require("sweetalert2");
   // const onAdd = (amount, stock) => {
   //   if (amount <= stock) {
   //     alert(`Agregaste ${amount} producto(s) al carrito`);
@@ -24,7 +24,8 @@ const ItemDetail = ({ product, initial }) => {
   const onAdd = () => {
     agregarAlCarrito(product, items, quantity);
     setQuantity(initial);
-    alert(`Agregaste ${items} producto(s) al carrito`);
+    Swal.fire("Ya lo tenes en el carrito", "Seguir comprando!", "success");
+    // alert(`Agregaste ${items} producto(s) al carrito`);
   };
 
   return (
