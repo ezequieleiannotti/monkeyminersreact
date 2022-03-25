@@ -27,7 +27,7 @@ export const CartProvider = ({ children }) => {
         (product) => product.item.id === item.id
       );
       setCart[indexActualizar].quantity =
-        cart[indexActualizar].count + quantity;
+        cart[indexActualizar].quantity + quantity;
       setCarQuantity(carQuantity + quantity);
       Swal.fire(`Agregaste ${item.tittle} al carrito, cantidad: ${quantity}.`);
     } else {
@@ -45,8 +45,10 @@ export const CartProvider = ({ children }) => {
   };
 
   const totalCart = () => {
-    // return setCart ((product) => product.quantity * product.item.precio})
-    return cart.reduce((product) => product.order * product.item.precio, 0);
+    return cart.reduce(
+      (todo, product) => (todo = todo + product.precio * product.count),
+      0
+    );
   };
 
   const vaciarCart = () => {

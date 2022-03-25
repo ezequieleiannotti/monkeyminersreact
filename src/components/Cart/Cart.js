@@ -5,8 +5,11 @@ import { BsFillTrashFill } from "react-icons/bs";
 import { Link, Navigate } from "react-router-dom";
 
 export const Cart = () => {
-  const { cart, totalCart, vaciarCart, eliminarItem, carQuantity } =
-    useContext(CartContext);
+  const { cart, totalCart, vaciarCart, eliminarItem } = useContext(CartContext);
+
+  const total = {
+    total: totalCart(),
+  };
 
   if (cart.length === 0) {
     return (
@@ -33,6 +36,7 @@ export const Cart = () => {
               <p>Compra: {product.quantity}</p>
               <p>Precio de cada uno $: {product.item.price}</p>
               <h2>Total: ${product.quantity * product.item.price}</h2>
+
               <button
                 className="btn btn-danger"
                 onClick={() => eliminarItem(product.item.id)}
@@ -42,9 +46,10 @@ export const Cart = () => {
               <hr />
             </div>
           ))}
-          <h2>Total Carrito = {totalCart}</h2>
-          <hr />
+
           <div className="my-2">
+            <h2>Total del carrito: $ {totalCart()}</h2>
+            <hr />
             <button className="btn btn-danger" onClick={vaciarCart}>
               Vaciar carrito
             </button>
