@@ -57,8 +57,13 @@ export const CartProvider = ({ children }) => {
     return cart.some((product) => product.id === id);
   };
 
+  // const eliminarItem = (id) => {
+  //   setCart(cart.filter((product) => product.id !== id));
+  // };
+
   const eliminarItem = (id) => {
-    setCart(cart.filter((product) => product.id !== id));
+    const carritoActualizado = cart.filter((product) => product.item.id !== id);
+    setCart(carritoActualizado);
   };
 
   useEffect(() => {

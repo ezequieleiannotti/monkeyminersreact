@@ -35,7 +35,7 @@ export const Cart = () => {
               <h2>Total: ${product.quantity * product.item.price}</h2>
               <button
                 className="btn btn-danger"
-                onClick={() => eliminarItem(product.id)}
+                onClick={() => eliminarItem(product.item.id)}
               >
                 <BsFillTrashFill />
               </button>
