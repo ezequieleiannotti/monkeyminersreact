@@ -12,7 +12,7 @@ const CartWidget = () => {
   } else {
     return (
       <li>
-        <Link to="/cart" style={{ color: "white" }}>
+        <Link to="/cart" className="carrito">
           <i className="fas fa-shopping-cart"></i>
           <div className="cuadro_carrito">{carQuantity}</div>
         </Link>

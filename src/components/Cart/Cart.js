@@ -1,15 +1,11 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
-import { totalCart } from "../../context/CartContext";
 import { BsFillTrashFill } from "react-icons/bs";
 import { Link, Navigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export const Cart = () => {
   const { cart, totalCart, vaciarCart, eliminarItem } = useContext(CartContext);
-
-  const total = {
-    total: totalCart(),
-  };
 
   if (cart.length === 0) {
     return (
@@ -53,7 +49,12 @@ export const Cart = () => {
             <button className="btn btn-danger" onClick={vaciarCart}>
               Vaciar carrito
             </button>
-            <Link to="/checkout" className="btn btn-success mx-2">
+
+            <Link
+              to="/checkout"
+              className="btn btn-success mx-2"
+              onClick={totalCart()}
+            >
               Terminar mi compra
             </Link>
           </div>

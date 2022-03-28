@@ -1,0 +1,23 @@
+.cuadro_carrito{
+    display: inline-block;
+    color: white;
+    background-color:black;
+    border: 1px solid yellow;
+    padding: 0 0.3rem;
+    border-radius: 30%;
+}
+
+
+.carrito{
+    color: white;
+    padding-top: 10px;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.fa-shopping-cart {
+    content: "\f07a";
+    padding: 6px;}
