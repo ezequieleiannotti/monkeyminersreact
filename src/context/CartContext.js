@@ -24,7 +24,7 @@ export const CartProvider = ({ children }) => {
     // };
     if (isInCart(item.id)) {
       const indexActualizar = cart.findIndex(
-        (product) => product.item.id === item.id
+        (order) => order.item.id === item.id
       );
       setCart[indexActualizar].quantity =
         cart[indexActualizar].quantity + quantity;
@@ -41,12 +41,12 @@ export const CartProvider = ({ children }) => {
   };
 
   const stockCart = () => {
-    return cart.reduce((acc, product) => acc + product.stock, 0);
+    return cart.reduce((acc, order) => acc + order.stock, 0);
   };
 
   const totalCart = () => {
     return cart.reduce(
-      (todo, product) => (todo = todo + product.precio * product.quantity),
+      (todo, order) => (todo = todo + order.precio * order.quantity),
       0
     );
   };
@@ -56,7 +56,7 @@ export const CartProvider = ({ children }) => {
   };
 
   const isInCart = (id) => {
-    return cart.some((product) => product.id === id);
+    return cart.some((order) => order.id === id);
   };
 
   // const eliminarItem = (id) => {

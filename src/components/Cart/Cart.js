@@ -21,28 +21,34 @@ export const Cart = () => {
   return (
     <>
       <div className="card">
-        <div className="container my-4">
-          <h2>Tu compra</h2>
+        <h2 className="text-center">Tu compra</h2>
+        <div className="container my-4 flex">
           <hr />
 
           {cart.map((product) => (
-            <div key={product.item.id}>
-              <h4>{product.item.title}</h4>
-              <p>{product.item.description_long}</p>
-              <p>Compra: {product.quantity}</p>
-              <p>Precio de cada uno $: {product.item.price}</p>
-              <h2>Total: ${product.quantity * product.item.price}</h2>
+            <div className="container">
+              <div className="display-md-6">
+                <div className="product-card">
+                  <div key={product.item.id}>
+                    <h4>{product.item.title}</h4>
+                    <p>{product.item.description_long}</p>
+                    <p>Compra: {product.quantity}</p>
+                    <p>Precio de cada uno $: {product.item.price}</p>
+                    <h2>Total: ${product.quantity * product.item.price}</h2>
 
-              <button
-                className="btn btn-danger"
-                onClick={() => eliminarItem(product.item.id)}
-              >
-                <BsFillTrashFill />
-              </button>
-              <hr />
+                    <button
+                      className="btn btn-danger"
+                      onClick={() => eliminarItem(product.item.id)}
+                    >
+                      <BsFillTrashFill />
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
-
+        </div>
+        <div className="product-card text-center">
           <div className="my-2">
             <h2>Total del carrito: $ {totalCart()}</h2>
             <hr />

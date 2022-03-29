@@ -1,12 +1,19 @@
 .cuadro_carrito{
     display: inline-block;
-    color: white;
-    background-color:black;
-    border: 1px solid yellow;
+    color: red;
+    background-color:white;
+    border: 1px solid black;
     padding: 0 0.3rem;
-    border-radius: 30%;
-}
+    border-radius: 45%;
+    opacity: 0.8;
 
+}
+/* .cuadro_carrito span {
+    animation: bounce 0.5s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+    animation-iteration-count: infinite;
+} */
 
 .carrito{
     color: white;

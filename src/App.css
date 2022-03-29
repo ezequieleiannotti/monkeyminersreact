@@ -22,7 +22,9 @@ body {
     font-family: monospace;
     background-color: #F9F9F9;
 }
-
+.flex {
+ display: flex;
+}
 .primary-heading {
     font-family: monospace;
 }

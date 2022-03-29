@@ -14,7 +14,10 @@ const CartWidget = () => {
       <li>
         <Link to="/cart" className="carrito">
           <i className="fas fa-shopping-cart"></i>
-          <div className="cuadro_carrito">{carQuantity}</div>
+          <div className="cuadro_carrito">
+            {" "}
+            <span>{carQuantity}</span>
+          </div>
         </Link>
       </li>
     );
