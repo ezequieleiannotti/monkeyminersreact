@@ -46,7 +46,7 @@ export const CartProvider = ({ children }) => {
 
   const totalCart = () => {
     return cart.reduce(
-      (todo, order) => (todo = todo + order.precio * order.quantity),
+      (todo, order) => (todo = todo + order.item.precio * order.item.quantity),
       0
     );
   };

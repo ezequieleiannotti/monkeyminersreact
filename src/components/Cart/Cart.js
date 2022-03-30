@@ -31,7 +31,7 @@ export const Cart = () => {
                 <div className="product-card">
                   <div key={product.item.id}>
                     <h4>{product.item.title}</h4>
-                    <p>{product.item.description_long}</p>
+
                     <p>Compra: {product.quantity}</p>
                     <p>Precio de cada uno $: {product.item.price}</p>
                     <h2>Total: ${product.quantity * product.item.price}</h2>
