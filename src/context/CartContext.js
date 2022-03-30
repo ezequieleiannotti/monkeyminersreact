@@ -26,7 +26,7 @@ export const CartProvider = ({ children }) => {
       const indexActualizar = cart.findIndex(
         (order) => order.item.id === item.id
       );
-      setCart[indexActualizar].quantity =
+      cart[indexActualizar].quantity =
         cart[indexActualizar].quantity + quantity;
       setCarQuantity(carQuantity + quantity);
       Swal.fire(`Agregaste ${item.tittle} al carrito, cantidad: ${quantity}.`);
@@ -56,7 +56,7 @@ export const CartProvider = ({ children }) => {
   };
 
   const isInCart = (id) => {
-    return cart.some((order) => order.id === id);
+    return cart.some((item) => item.item.id === id);
   };
 
   // const eliminarItem = (id) => {
