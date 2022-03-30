@@ -27,6 +27,11 @@ const NavBar = (props) => {
               <NavLink
                 activeClassName="active"
                 className="nav-link"
+                to={"/firebase"}
+              ></NavLink>
+              <NavLink
+                activeClassName="active"
+                className="nav-link"
                 to={"/category/3090"}
               >
                 {props.link1}

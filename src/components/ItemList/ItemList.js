@@ -11,8 +11,8 @@ const ItemList = ({ products, loading }) => {
             <div className="col" key={index}>
               <Item
                 id={product.id}
-                title={product.name}
-                description={product.description_short}
+                // title={product.title}
+                description={product.description}
                 price={product.price}
                 stock={product.stock}
                 pictureUrl={product.pictureUrl}

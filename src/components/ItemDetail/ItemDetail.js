@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 
 const ItemDetail = ({ product, initial }) => {
-  const { title, description, price, stock, pictureUrl } = product;
+  const { title, description, price, stock, descriptionlong, pictureUrl } =
+    product;
   const [quantity, setQuantity] = useState(initial);
   const [finishBuy, setFinishBuy] = useState(false);
   const [items, setItems] = useState(1);
@@ -33,10 +34,12 @@ const ItemDetail = ({ product, initial }) => {
       <h2 className="display-6">Detalle del Producto</h2>
       <div className="container">
         <img src={pictureUrl} alt="" />
-        <p>{title}</p>
+        {/* <p>{title}</p> */}
         <p>{description}</p>
+        <p>{descriptionlong}</p>
         <hr />
         <p>Precio en USD: {price}</p>
+
         {finishBuy > 0 && (
           <Link to="/cart">
             <button type="button" className="btn btn-primary">
@@ -44,6 +47,7 @@ const ItemDetail = ({ product, initial }) => {
             </button>
           </Link>
         )}
+
         {!finishBuy && (
           <ItemCount
             stock={stock}

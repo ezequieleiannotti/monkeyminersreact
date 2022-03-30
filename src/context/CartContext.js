@@ -45,11 +45,15 @@ export const CartProvider = ({ children }) => {
   };
 
   const totalCart = () => {
-    return cart.reduce(
-      (todo, order) => (todo = todo + order.item.precio * order.item.quantity),
-      0
-    );
+    return cart
+      .map((item) => item.quantity * item.price)
+      .reduce((pv, cv) => pv + cv, 0);
   };
+  //   return cart.reduce(
+  //     (todo, item) => (todo = todo + item.item.precio + item.item.quantity),
+  //     0
+  //   );
+  // };
 
   const vaciarCart = () => {
     setCart([]);
