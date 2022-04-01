@@ -8,7 +8,6 @@ const Item = ({
   title,
   description,
   price,
-  descriptionlong,
   pictureUrl,
   stock,
   loading,
@@ -24,7 +23,6 @@ const Item = ({
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{description}</p>
         <hr />
-        {/* <p className="card-text">{descriptionlong}</p> */}
         <p className="card-text">${price}</p>
         <p className="card-text">Disponibles: {stock}</p>
         <hr />

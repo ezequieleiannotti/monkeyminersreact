@@ -7,7 +7,7 @@ import { CartProvider } from "./context/CartContext";
 import { Cart } from "./components/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 import CardsInfo from "./components/CardsInfo/CardsInfo";
-import { FirebaseComponent } from "./components/FirebaseComponent";
+// import { FirebaseComponent } from "./components/FirebaseComponent";
 
 const App = () => {
   return (
@@ -15,7 +15,6 @@ const App = () => {
       <BrowserRouter>
         <NavBar
           logo={"Monkey Miners"}
-          // link4={"firebase"}
           link1={"3090"}
           link2={"3080"}
           link3={"GPU"}
@@ -27,7 +26,7 @@ const App = () => {
               <ItemListContainer heading={"Rig para mineria Ethereum"} />
             }
           ></Route>
-          {/* <Route path="/firebase" element={<FirebaseComponent />}></Route> */}
+
           <Route
             path="/category/:category"
             element={
