@@ -2,10 +2,49 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { BsFillTrashFill } from "react-icons/bs";
 import { Link, Navigate } from "react-router-dom";
+import { collection, addDoc } from "firebase/firestore";
 import Swal from "sweetalert2";
+import { db } from "../../utils/getFirebase";
 
 export const Cart = () => {
   const { cart, totalCart, vaciarCart, eliminarItem } = useContext(CartContext);
+
+  const crearOrden = () => {
+    const coleccionProductos = collection(db, "ordenes");
+
+    const usuario = {
+      nombre: "Ezequiel",
+      email: "Ezequiel@gmail.com",
+      telefono: "1132589485",
+    };
+
+    const orden = {
+      usuario,
+      cart,
+      total: totalCart(),
+    };
+
+    const pedido = addDoc(coleccionProductos, orden);
+
+    pedido
+      .then((resultado) => {
+        return Swal.fire(
+          `N° de Orden:  ${resultado.id}`,
+          `
+            El total de tu compra es $${orden.total}.
+            ¡Gracias por tu compra!
+            `,
+          "success",
+          vaciarCart()
+        );
+      })
+      .catch((error) => {
+        return Swal.fire({
+          icon: "error",
+          text: "Algo salio mal",
+        });
+      });
+  };
 
   if (cart.length === 0) {
     return (
@@ -52,6 +91,7 @@ export const Cart = () => {
           <div className="my-2">
             <h2>Total del carrito: $ {totalCart()}</h2>
             <hr />
+            <button className="cta" onClick={crearOrden}></button>
             <button className="btn btn-danger" onClick={vaciarCart}>
               Vaciar carrito
             </button>
