@@ -3,29 +3,51 @@ import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 import { useParams } from "react-router-dom";
 import { getFirestore } from "../../utils/getFirebase";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 export const ItemListContainer = ({ heading }) => {
   const [products, setProducts] = useState([{}]);
   const [loading, setLoading] = useState(true);
-  const { category } = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
-    setLoading(true);
-    const db = getFirestore();
-    const itemCollection = db.collection("items");
-    const query = category
-      ? itemCollection.where("category", "==", category)
-      : itemCollection;
+    const itemsRef = collection(getFirestore, "items");
+    const q = id ? query(itemsRef, where("category", "==", id)) : itemsRef;
 
-    query
-      .get()
-      .then((result) =>
-        setProducts(result.docs.map((i) => ({ id: i.id, ...i.data() })))
-      )
-      .catch((err) => console.error(err))
+    getDocs(q)
+      .then((res) => {
+        setProducts(
+          res.docs.map((doc) => {
+            return {
+              id: doc.id,
+              ...doc.data(),
+            };
+          })
+        );
+      })
+
       .finally(() => setLoading(false));
-  }, [category, setLoading]);
+  }, [id]);
 
+  //partenueva del firebase
+  // useEffect(() => {
+  //   setLoading(true);
+  //   const db = getFirestore();
+  //   const itemCollection = db.collection("items");
+  //   const query = category
+  //     ? itemCollection.where("category", "==", category)
+  //     : itemCollection;
+
+  //   query
+  //     .get()
+  //     .then((result) =>
+  //       setProducts(result.docs.map((i) => ({ id: i.id, ...i.data() })))
+  //     )
+  //     .catch((err) => console.error(err))
+  //     .finally(() => setLoading(false));
+  // }, [category, setLoading]);
+
+  //PARTE QUE COMPILA BIEN PERO SIN FIREBASE
   // const getProductList = () => {
   //   fetch("../json/productList.json")
   //     .then((response) => response.json())

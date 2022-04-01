@@ -3,6 +3,7 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import Spinner from "../Spinner/Spinner";
 import { useParams } from "react-router-dom";
 import { getFirestore } from "../../utils/getFirebase";
+import { doc, getDoc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
@@ -10,16 +11,33 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    setLoading(true);
-    const db = getFirestore();
-    const itemOne = db.collection("items").doc(id);
-    itemOne
-      .get()
-      .then((result) => setProduct({ id: result.id, ...result.data() }))
-      .catch((err) => console.error(err))
-      .finally(() => setLoading(false));
-  }, [id, setProduct]);
+    const itemRef = doc(getFirestore, "items", id);
 
+    getDoc(itemRef)
+      .then((res) => {
+        setProduct({
+          id: res.id,
+          ...res.data(),
+        });
+      })
+
+      .finally(() => setLoading(false));
+
+    // eslint-disable-next-line
+  }, []);
+  //PARTE NUEVA DEL FIREBASE
+  // useEffect(() => {
+  //   setLoading(true);
+  //   const db = getFirestore();
+  //   const itemOne = db.collection("items").doc(id);
+  //   itemOne
+  //     .get()
+  //     .then((result) => setProduct({ id: result.id, ...result.data() }))
+  //     .catch((err) => console.error(err))
+  //     .finally(() => setLoading(false));
+  // }, [id, setProduct]);
+
+  //PARTE QUE COMPILA BIEN PERO SIN FIREBASE
   // const getProduct = () => {
   //   fetch("../json/productList.json")
   //     .then((response) => response.json())
