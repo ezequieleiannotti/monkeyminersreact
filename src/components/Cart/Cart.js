@@ -4,13 +4,13 @@ import { BsFillTrashFill } from "react-icons/bs";
 import { Link, Navigate } from "react-router-dom";
 import { collection, addDoc } from "firebase/firestore";
 import Swal from "sweetalert2";
-import { getFirestore } from "../../utils/getFirebase";
+import { db } from "../../utils/getFirebase";
 
 export const Cart = () => {
   const { cart, totalCart, vaciarCart, eliminarItem } = useContext(CartContext);
 
   const crearOrden = () => {
-    const coleccionProductos = collection(getFirestore, "ordenes");
+    const coleccionProductos = collection(db, "ordenes");
 
     const usuario = {
       nombre: "Ezequiel",

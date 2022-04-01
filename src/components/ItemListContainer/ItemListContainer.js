@@ -2,17 +2,20 @@ import React, { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 import { useParams } from "react-router-dom";
-import { getFirestore } from "../../utils/getFirebase";
+import { db } from "../../utils/getFirebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 
 export const ItemListContainer = ({ heading }) => {
   const [products, setProducts] = useState([{}]);
   const [loading, setLoading] = useState(true);
-  const { id } = useParams();
-
+  const { category } = useParams();
+  console.log(category);
   useEffect(() => {
-    const itemsRef = collection(getFirestore, "items");
-    const q = id ? query(itemsRef, where("category", "==", id)) : itemsRef;
+    const itemsRef = collection(db, "items");
+    // console.log(id);
+    const q = category
+      ? query(itemsRef, where("category", "==", category))
+      : itemsRef;
 
     getDocs(q)
       .then((res) => {
@@ -27,7 +30,7 @@ export const ItemListContainer = ({ heading }) => {
       })
 
       .finally(() => setLoading(false));
-  }, [id]);
+  }, [category]);
 
   //partenueva del firebase
   // useEffect(() => {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Spinner from "../Spinner/Spinner";
 import { useParams } from "react-router-dom";
-import { getFirestore } from "../../utils/getFirebase";
+import { db } from "../../utils/getFirebase";
 import { doc, getDoc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    const itemRef = doc(getFirestore, "items", id);
+    const itemRef = doc(db, "items", id);
 
     getDoc(itemRef)
       .then((res) => {
