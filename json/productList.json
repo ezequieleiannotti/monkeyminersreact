@@ -1,0 +1,92 @@
+[
+    {
+        "id": "1",
+        "category": "3090",
+        "title": "Rig de Mineria Modelo 3090 con 6 GPU",
+        "description": "Rig 3090 x6",
+        "descriptionlong":  "Rig de 6 placas de video 3090, poder de minado 715 MHZ. Genera 800 USDT por mes. 0.27 Ether por Mes",
+        "price": 15000,
+        "stock":5,
+        "pictureUrl": "https://t7m8e9c8.rocketcdn.me/wp-content/uploads/2017/09/rig-minado-ethereum-zcash-nvidia-amd.jpg"
+    },
+    {
+        "id": "2",
+        "category": "3090",
+        "title": "Rig de Mineria Modelo 3090 con 5 GPU",
+        "description": "Rig 3090 x5",
+        "descriptionlong": "Rig de 6 placas de video 3090, poder de minado 595 MHZ. Genera 673 USDT por mes. 0.23 Ether por Mes",
+        "price": 12000,
+        "stock":8,
+        "pictureUrl": "https://i.blogs.es/adecd1/rig1/450_1000.jpg"
+    },
+    {
+        "id": "3",
+        "category": "3090",
+        "title": "Rig de Mineria Modelo 3090 con 4 GPU",
+        "description": "Rig 3090 x4",
+        "descriptionlong": "Rig de 6 placas de video 3090, poder de minado 475 MHZ. Genera 537 USDT por mes. 0.18 Ether por Mes",
+        "price": 10000,
+        "stock":2,
+        "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3f80xw3ZFy33M8PSnuDJPl-nzTNdPhR5CDfZDdX5Xf5BIfGTMsqJ8afM9y5x5DHtfdlM&usqp=CAU"
+    },
+    {
+        "id": "4",
+        "category": "3080",
+        "title": "Rig de Mineria Modelo 3080 con 6 GPU",
+        "description": "Rig 3080 x6",
+        "descriptionlong": "Rig de 6 placas de video 3090, poder de minado 549 MHZ. Genera 539 USDT por mes. 0.22 Ether por Mes",
+        "price": 10000,
+        "stock":3,
+        "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSQc9fQNMS9_mKdA3uTd2SDYBofH-3P1RiIsT2Y0k3QkFu9hDE_YOTaywJSB4Yz6IpGg4&usqp=CAU"
+    },
+    {
+        "id": "5",
+        "category": "3080",
+        "title": "Rig de Mineria Modelo 3080 con 5 GPU",
+        "description": "Rig 3080 x5",
+        "descriptionlong": "Rig de 5 placas de video, poder de minado 450 MHZ. Nvidia o Geforce",
+        "price": 8000,
+        "stock":7,
+        "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1tDpp5VttnLtMDhzHnPQ8ABIsFmjXT3DMwA&usqp=CAU"
+    },
+    {
+        "id": "6",
+        "category": "3080",
+        "title": "Rig de Mineria Modelo 3080 con 4 GPU",
+        "description": "Rig 3080 x4",
+        "descriptionlong": "Rig de 4 placas de video 3090, poder de minado 366 MHZ. Genera 431 USDT por mes. 0.14 Ether por Mes",
+        "price": 6000,
+        "stock":9,
+        "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXk8gQ2VW-hT34MeYrJrm_fGaAbsQgim7HiwnPBpvm26qnCp3Ip35tBdhJ6WiqIfFhjcY&usqp=CAU"
+    },
+    {
+        "id": "7",
+        "category": "GPU",
+        "title": "Placa de Video 3700",
+        "description": "Placa de Video 3700",
+        "descriptionlong": "Placa de Video",
+        "price": 5000,
+        "stock":9,
+        "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_918426-MLA47917241490_102021-O.webp"
+    },
+    {
+        "id": "8",
+        "category": "GPU",
+        "title": "Placa de Video 3700TI",
+        "description": "Placa de Video 3700TI",
+        "descriptionlong": "Placa de Video",
+        "price": 5000,
+        "stock":11,
+        "pictureUrl": "https://outtec.com.ar/wp-content/uploads/2022/01/c1.png"
+    },
+    {
+        "id": "9",
+        "category": "GPU",
+        "title": "Placa de Video 3700 LHR",
+        "description": "Placa de Video 3700 LHR",
+        "descriptionlong": "Placa de Video",
+        "price": 5000,
+        "stock":6,
+        "pictureUrl": "https://m.media-amazon.com/images/I/81wgpSgw-kS._AC_SY450_.jpg"
+    }
+]
