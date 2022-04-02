@@ -2,13 +2,18 @@
   "name": "monkeyminersiannotti2",
   "version": "0.1.0",
   "private": true,
+  "homepage":"http://ezequieleiannotti.github.io/monkeyminersreact/",
   "dependencies": {
+    "@firebase/auth": "^0.19.11",
+    "@firebase/auth-types": "^0.11.0",
+    "@firebase/firestore": "^3.4.7",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.1",
     "bootstrap": "^5.1.3",
     "firebase": "^9.6.10",
+    "gh-pages": "^3.2.3",
     "mdb-react-ui-kit": "^3.0.0",
     "mdbreact": "^5.2.0",
     "react": "^17.0.2",
@@ -20,7 +25,10 @@
     "sweetalert2": "^11.4.7",
     "web-vitals": "^2.1.4"
   },
+
   "scripts": {
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -b build"
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
