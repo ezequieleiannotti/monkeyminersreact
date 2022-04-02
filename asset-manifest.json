@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/monkeyminersreact/static/css/main.6811bf1c.css",
+    "main.css": "/monkeyminersreact/static/css/main.8afe3958.css",
     "main.js": "/monkeyminersreact/static/js/main.a7029f78.js",
     "static/js/787.1c578dda.chunk.js": "/monkeyminersreact/static/js/787.1c578dda.chunk.js",
     "index.html": "/monkeyminersreact/index.html",
-    "main.6811bf1c.css.map": "/monkeyminersreact/static/css/main.6811bf1c.css.map",
+    "main.8afe3958.css.map": "/monkeyminersreact/static/css/main.8afe3958.css.map",
     "main.a7029f78.js.map": "/monkeyminersreact/static/js/main.a7029f78.js.map",
     "787.1c578dda.chunk.js.map": "/monkeyminersreact/static/js/787.1c578dda.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6811bf1c.css",
+    "static/css/main.8afe3958.css",
     "static/js/main.a7029f78.js"
   ]
 }
