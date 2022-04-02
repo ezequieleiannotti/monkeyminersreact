@@ -1,6 +1,7 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
 import Swal from "sweetalert2";
 export const CartContext = createContext([]);
+export const useCartContext = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
@@ -44,16 +45,18 @@ export const CartProvider = ({ children }) => {
     return cart.reduce((acc, order) => acc + order.stock, 0);
   };
 
-  const totalCart = () => {
-    return cart
-      .map((item) => item.quantity * item.price)
-      .reduce((pv, cv) => pv + cv, 0);
-  };
-  //   return cart.reduce(
-  //     (todo, item) => (todo = todo + item.item.precio + item.item.quantity),
-  //     0
-  //   );
+  // const totalCart = () => {
+  //   return cart
+  //     .map((item) => item.item.quantity * item.item.price)
+  //     .reduce((pv, cv) => pv + cv, 0);
   // };
+  const totalCart = () => {
+    console.log(cart);
+    return cart.reduce(
+      (todo, item) => (todo = todo + item.item.price * item.quantity),
+      0
+    );
+  };
 
   const vaciarCart = () => {
     setCart([]);
