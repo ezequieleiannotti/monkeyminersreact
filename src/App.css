@@ -16,6 +16,9 @@
 body {
     background-color: #A4A7A7
 }
+.product-img {
+    width: 100%;
+}
 
 .product-card {
     font-size: 17px;
