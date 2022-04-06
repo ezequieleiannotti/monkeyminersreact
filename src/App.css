@@ -24,6 +24,7 @@ body {
     font-size: 17px;
     font-family: monospace;
     background-color: #F9F9F9;
+    padding: 2%;
 }
 .flex {
  display: flex;
@@ -48,4 +49,8 @@ body {
 
 .card-text{
       font-family: monospace;
+}
+
+.btn {
+    padding: 1%!important
 }

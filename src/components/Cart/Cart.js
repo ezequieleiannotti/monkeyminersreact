@@ -1,50 +1,53 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import { BsFillTrashFill } from "react-icons/bs";
-import { Link, Navigate } from "react-router-dom";
-import { collection, addDoc } from "firebase/firestore";
-import Swal from "sweetalert2";
-import { db } from "../../utils/getFirebase";
+import { Link } from "react-router-dom";
+
+// import { collection, addDoc } from "firebase/firestore";
+// import Swal from "sweetalert2";
+// import { db } from "../../utils/getFirebase";
+import Checkout from "../Checkout/Checkout";
 
 export const Cart = () => {
   const { cart, totalCart, vaciarCart, eliminarItem } = useContext(CartContext);
 
-  const crearOrden = () => {
-    const coleccionProductos = collection(db, "ordenes");
+  const [show, setShow] = useState(false);
+  // const crearOrden = () => {
+  //   const coleccionProductos = collection(db, "ordenes");
 
-    const usuario = {
-      nombre: "Ezequiel",
-      email: "Ezequiel@gmail.com",
-      telefono: "1132589485",
-    };
+  //   const usuario = {
+  //     nombre: "Ezequiel",
+  //     email: "Ezequiel@gmail.com",
+  //     telefono: "1132589485",
+  //   };
 
-    const orden = {
-      usuario,
-      cart,
-      total: totalCart(),
-    };
+  //   const orden = {
+  //     usuario,
+  //     cart,
+  //     total: totalCart(),
+  //   };
 
-    const pedido = addDoc(coleccionProductos, orden);
+  //   const pedido = addDoc(coleccionProductos, orden);
 
-    pedido
-      .then((resultado) => {
-        return Swal.fire(
-          `N° de Orden:  ${resultado.id}`,
-          `
-            El total de tu compra es $${orden.total}.
-            ¡Gracias por tu compra!
-            `,
-          "success",
-          vaciarCart()
-        );
-      })
-      .catch((error) => {
-        return Swal.fire({
-          icon: "error",
-          text: "Algo salio mal",
-        });
-      });
-  };
+  //   pedido
+  //     .then((resultado) => {
+  //       return Swal.fire(
+  //         `N° de Orden:  ${resultado.id}`,
+  //         `
+  //           El total de tu compra es $${orden.total}.
+  //           ¡Gracias por tu compra!
+  //           `,
+  //         "success",
+  //         vaciarCart()
+  //       );
+  //     })
+  //     .catch((error) => {
+  //       return Swal.fire({
+  //         icon: "error",
+  //         text: "Algo salio mal",
+  //       });
+  //     });
+  // };
 
   if (cart.length === 0) {
     return (
@@ -60,8 +63,8 @@ export const Cart = () => {
   return (
     <>
       <div className="card">
-        <h2 className="text-center">Tu compra</h2>
-        <div className="container my-4 flex">
+        <h2 className="text-center">TU CARRITO DE COMPRAS</h2>
+        <div className="container my-1 flex">
           <hr />
 
           {cart.map((product) => (
@@ -72,8 +75,8 @@ export const Cart = () => {
                     <h4>{product.item.title}</h4>
 
                     <p>Compra: {product.quantity}</p>
-                    <p>Precio de cada uno $: {product.item.price}</p>
-                    <h2>Total: ${product.quantity * product.item.price}</h2>
+                    <p>Precio de cada uno u$d: {product.item.price}</p>
+                    <h2>Total: u$d {product.quantity * product.item.price}</h2>
 
                     <button
                       className="btn btn-danger"
@@ -89,20 +92,16 @@ export const Cart = () => {
         </div>
         <div className="product-card text-center">
           <div className="my-2">
-            <h2>Total del carrito: $ {totalCart()}</h2>
+            <h1>Total del carrito: U$D {totalCart()}</h1>
             <hr />
-            <button className="cta" onClick={crearOrden}></button>
+            <button className="btn btn-success" onClick={() => setShow(!show)}>
+              Terminar Compra
+            </button>
             <button className="btn btn-danger" onClick={vaciarCart}>
               Vaciar carrito
             </button>
 
-            <Link
-              to="/checkout"
-              className="btn btn-success mx-2"
-              onClick={totalCart()}
-            >
-              Terminar mi compra
-            </Link>
+            <Checkout show={show} setShow={setShow} />
           </div>
         </div>
       </div>
