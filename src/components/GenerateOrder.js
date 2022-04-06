@@ -28,32 +28,9 @@ export const generateOrder = async (
   };
   const batch = writeBatch(db);
   const orderRef = collection(db, "orders");
-  // const productoRef = collection(db, "items");
-
-  // const q = query(
-  //   productoRef,
-  //   where(
-  //     documentId(),
-  //     "in",
-  //     cart.map((x) => x.id)
-  //   )
-  // );
-
-  // const product = await getDocs(q);
 
   const sinStock = [];
 
-  // product.docs.forEach((doc) => {
-  //   const itemToUpdate = cart.find((x) => x.id === doc.id);
-
-  //   if (doc.data().stock >= itemToUpdate.quantity) {
-  //     batch.update(doc.ref, {
-  //       stock: doc.data().stock - itemToUpdate.quantity,
-  //     });
-  //   } else {
-  //     stockZero.push(itemToUpdate);
-  //   }
-  // });
   if (sinStock.length === 0) {
     addDoc(orderRef, order).then((y) => {
       batch.commit();
