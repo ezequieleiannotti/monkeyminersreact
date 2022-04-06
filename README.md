@@ -8,16 +8,16 @@
 <p>Si desea correr este proyecto, simplemente clone este repositorio y ejecute npm install luego npm start en carpeta raiz y carpeta frontend</p>
 <h3>Se ulitizaron librerias omo formik, YUP, Boostrapm, Sweetalert</h3>
 
-<p>Instalar las librerisa</p>
+<p>Instalar las librerias</p>
 <ul>
-<li>nnpm i yup </li>
+<li>npm i yup </li>
 <li>npm i formik</li>
-<li>nnpm i bootstrap</li>
+<li>npm i bootstrap</li>
 <li>npm i react-router-dom</li>
 </ul>
 
-<p>Tambien esta en un deploy en github Pages te dejo el link para verlo en la pc o celu!</p>
+<p>Tambien te dejo el link para verlo en la pc o celu!</p>
 
-<A HREF="https://ezequieleiannotti.github.io/monkeyminersreact/"> Este es el link </A>
+<A HREF="https://ezequieleiannotti.github.io/monkeyminersreact/">Web en Deploy github pages </A>
 
-<a href="https://github.com/"> Desarrollado por Ezequiel Iannotti</a>
+<a href="https://github.com/ezequieleiannotti//"> Desarrollado por Ezequiel Iannotti</a>
