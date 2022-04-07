@@ -1,14 +1,5 @@
 import { toast } from "react-toastify";
-import {
-  collection,
-  addDoc,
-  Timestamp,
-  writeBatch,
-  where,
-  documentId,
-  query,
-  getDocs,
-} from "firebase/firestore";
+import { collection, addDoc, Timestamp, writeBatch } from "firebase/firestore";
 import { db } from "../utils/getFirebase";
 
 export const generateOrder = async (

@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./ItemCount.css";
 
 export const ItemCount = ({ stock, onAdd, setItems, items, initial }) => {
