@@ -2,52 +2,12 @@ import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import { BsFillTrashFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-
-// import { collection, addDoc } from "firebase/firestore";
-// import Swal from "sweetalert2";
-// import { db } from "../../utils/getFirebase";
 import Checkout from "../Checkout/Checkout";
 
 export const Cart = () => {
   const { cart, totalCart, vaciarCart, eliminarItem } = useContext(CartContext);
 
   const [show, setShow] = useState(false);
-  // const crearOrden = () => {
-  //   const coleccionProductos = collection(db, "ordenes");
-
-  //   const usuario = {
-  //     nombre: "Ezequiel",
-  //     email: "Ezequiel@gmail.com",
-  //     telefono: "1132589485",
-  //   };
-
-  //   const orden = {
-  //     usuario,
-  //     cart,
-  //     total: totalCart(),
-  //   };
-
-  //   const pedido = addDoc(coleccionProductos, orden);
-
-  //   pedido
-  //     .then((resultado) => {
-  //       return Swal.fire(
-  //         `N° de Orden:  ${resultado.id}`,
-  //         `
-  //           El total de tu compra es $${orden.total}.
-  //           ¡Gracias por tu compra!
-  //           `,
-  //         "success",
-  //         vaciarCart()
-  //       );
-  //     })
-  //     .catch((error) => {
-  //       return Swal.fire({
-  //         icon: "error",
-  //         text: "Algo salio mal",
-  //       });
-  //     });
-  // };
 
   if (cart.length === 0) {
     return (

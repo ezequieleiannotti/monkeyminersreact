@@ -7,7 +7,6 @@ import { CartProvider } from "./context/CartContext";
 import { Cart } from "./components/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 import CardsInfo from "./components/CardsInfo/CardsInfo";
-// import { FirebaseComponent } from "./components/FirebaseComponent";
 
 const App = () => {
   return (
@@ -43,19 +42,5 @@ const App = () => {
     </CartProvider>
   );
 };
-
-{
-  /* <Route path="/item/:id" element={<ItemDetailContainer />}></Route>
-<Route path="/cart" element={<Cart />}></Route> */
-}
-
-// <Routes>
-// <Route path="/" element={ <ItemListContainer/> }/>
-// <Route path='/productos/:catId' element={ <ItemListContainer/> }/>
-// <Route path='/detail/:itemId' element={ <ItemDetailContainer/> }/>
-// <Route path="/nosotros" element={ <Nosotros /> } />
-// <Route path="/contacto" element={ <Contacto /> } />
-// <Route path='/cart' element={ <Cart/> } />
-// <Route path='/checkout' element={ <Checkout/> } />
 
 export default App;

@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { ItemCount } from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 import { Link } from "react-router-dom";
-// import { CartContext } from "../../context/CartContext";
 import { useCart } from "../../context/CartContext";
 
 const ItemDetail = ({ product, initial }) => {
@@ -13,20 +12,11 @@ const ItemDetail = ({ product, initial }) => {
   const [items, setItems] = useState(1);
   const { agregarAlCarrito } = useCart();
   const Swal = require("sweetalert2");
-  // const onAdd = (amount, stock) => {
-  //   if (amount <= stock) {
-  //     alert(`Agregaste ${amount} producto(s) al carrito`);
-  //     setFinishBuy(true);
-  //   } else {
-  //     alert("No hay stock disponible para este producto");
-  //   }
-  // };
 
   const onAdd = () => {
     agregarAlCarrito(product, items, quantity);
     setQuantity(initial);
     Swal.fire("Ya lo tenes en el carrito", "Seguir comprando!", "success");
-    // alert(`Agregaste ${items} producto(s) al carrito`);
   };
 
   return (
@@ -34,7 +24,6 @@ const ItemDetail = ({ product, initial }) => {
       <h2 className="display-6">Detalle del Producto</h2>
       <div className="container">
         <img src={pictureUrl} alt="" />
-        {/* <p>{title}</p> */}
         <p>{description}</p>
         <p>{descriptionlong}</p>
         <hr />

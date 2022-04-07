@@ -8,21 +8,6 @@ export const CartProvider = ({ children }) => {
   const [carQuantity, setCarQuantity] = useState(0);
 
   const agregarAlCarrito = (item, quantity) => {
-    //   const itemInCart = cart.some((order) => order.item.id === item.id);
-    //   if (itemInCart) {
-    //     const updateCart = cart.map((order) => {
-    //       setCarQuantity(carQuantity + quantity);
-    //       if (order.item.id === item.id) {
-    //         return { ...order, quantity: quantity + order };
-    //       } else {
-    //         return order;
-    //       }
-    //     });
-    //     setCart(updateCart);
-    //   } else {
-    //     setCart((prevState) => [...prevState, { item, quantity }]);
-    //   }
-    // };
     if (isInCart(item.id)) {
       const indexActualizar = cart.findIndex(
         (order) => order.item.id === item.id
@@ -45,11 +30,6 @@ export const CartProvider = ({ children }) => {
     return cart.reduce((acc, order) => acc + order.stock, 0);
   };
 
-  // const totalCart = () => {
-  //   return cart
-  //     .map((item) => item.item.quantity * item.item.price)
-  //     .reduce((pv, cv) => pv + cv, 0);
-  // };
   const totalCart = () => {
     console.log(cart);
     return cart.reduce(
@@ -65,10 +45,6 @@ export const CartProvider = ({ children }) => {
   const isInCart = (id) => {
     return cart.some((item) => item.item.id === id);
   };
-
-  // const eliminarItem = (id) => {
-  //   setCart(cart.filter((product) => product.id !== id));
-  // };
 
   const eliminarItem = (id) => {
     const carritoActualizado = cart.filter((product) => product.item.id !== id);
