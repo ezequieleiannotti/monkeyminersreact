@@ -1,6 +1,11 @@
 # Curso React js - Coderhouse
 
-<h1>Monkey Miners es E-commerce para la compra de Rig de minerias de Criptomonedas</h1>
+<<<<<<< HEAD
+
+# <h1>Monkey Miners es E-commerce para la compra de Rig de minerias de Criptomonedas</h1>
+
+<h1>Monkey Miners es E-commerce para la compra de Rig de minerias de Criptomonedas (hoy Ether la mas rentable)</h1>
+>>>>>>> 03af58ff0bcde38b0728cf61994eeb56b9496389
 
 <img src="https://github.com/ezequieleiannotti/monkeyminersreact/blob/master/monkeyminers.gif">
 
